@@ -2,11 +2,11 @@
 
 ## 3.10.1 Local Operation
 
-This is done with the Handle Held Device (HHD).
+This is done with the Handle Held Device (HHD), see manual.
 
 ### 3.10.1.1 Local Operation Performance Limits
 
-This can be configured using settings, accessible by restricted user level in the EUI.
+This can be configured using settings, accessible by restricted user level in the EUI/HHD, see manual.
 
 ## 3.10.2 Remote Operation
 
@@ -24,7 +24,7 @@ This is done with the EUI or HHD.
 
 ## 3.10.4 Readiness
 
-TODO: needs to be tested
+This can be tested but there should be no problem.
 
 ## 3.10.5 (Descoped) Connection to the TCS
 
@@ -77,20 +77,20 @@ The forementioned topic configuration file includes a field for defining the upd
 
 ## 3.10.10 Events
 
-The MCS outputs every state change as events, according to the requests from Rubin.
+The MCS outputs every state change as events, according to the requests from Rubin. This has been extensively tested.
 
 ### 3.10.10.1 Discrete State Reporting
 
-The MCS outputs every state change as events, according to the requests from Rubin.
+The MCS outputs every state change as events, according to the requests from Rubin. This has been extensively tested.
 
 #### 3.10.10.1.1 Report Named States as Integers
 
-There are defined enums for reporting the different states of the system.
+There are defined enums for reporting the different states of the system. This has been extensively tested.
 
 #### 3.10.10.1.2 Obtain Full State
 
 There is a command available in the MCS for requesting the current state of all the system, this command is accepted even
-when the one who requests is not the commander.
+when the one who requests is not the commander. This has been extensively tested.
 
 ## 3.10.11 Time
 
@@ -102,7 +102,7 @@ The telescope can be commanded by the CSC, and has been extensively tested.
 
 ## 3.10.13 MCS Camera Cable Wrap Positioning Command
 
-The camera rotator can be commanded by the CSC, and operated as a slave of the camera rotator.
+The camera rotator can be commanded by the CSC, and is operated as a slave of the camera rotator.
 
 ## 3.10.14 MCS Positioning Update Frequency
 
@@ -139,7 +139,7 @@ The limits are trigger when overcomed, so the stopping distance will depend on t
 
 ## 3.10.22 Telemetry Buffer
 
-The telemetry is publish synchronously over TCP to the CSC and stored locally for 2 days.
+Descoped, the CSC should manage this using SAL.
 
 ## 3.10.23 Engineering User Interface
 
@@ -174,7 +174,7 @@ This can be done using the settings pages available in the EUI.
 For rebooting different tools are available, but a whole reboot from the EUI is not possible, there are procedures for
 rebooting the system properly to reduce shutdown times.
 
-Additionally, There are both luminous and audible indication when the system is enabled.
+Additionally, there are both luminous and audible indication when an axis (AZ or EL) is enabled. This was requested by Rubin.
 
 ## 3.10.24 Natural Frequency Avoidance
 
