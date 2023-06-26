@@ -51,11 +51,12 @@ The telescope has an independent port for telemetry to serve the CSC, and has be
 
 ### 3.10.7.1.3 Communication with SAL
 
-The MCS has no longer interaction with the SAL interface.
+The MCS has no longer interaction with the SAL interface, and has been extensively tested.
 
 ## 3.10.8 Control Commands
 
-The telescope can be commanded by the CSC as if it was the EUI, the same commands are available for both systems.
+The telescope can be commanded by the CSC as if it was the EUI, the same commands are available for both systems. This
+has been extensively tested.
 
 ### 3.10.8.1 Initial Command Acknowledgement
 
@@ -69,11 +70,13 @@ A final state is sent for every accepted command, this has been extensively test
 
 ### 3.10.9.1 Telemetry Topics
 
-There is a configuration file shared by the CSC and the MCS, where the telemetry topics are defined.
+There is a configuration file shared by the CSC and the MCS, where the telemetry topics are defined. Telemetry has been
+extensively tested.
 
 ### 3.10.9.1.1 Telemetry Timing
 
-The forementioned topic configuration file includes a field for defining the update frequency of the topic.
+The forementioned topic configuration file includes a field for defining the update frequency of the topic. This has been
+extensively tested.
 
 ## 3.10.10 Events
 
@@ -94,7 +97,7 @@ when the one who requests is not the commander. This has been extensively tested
 
 ## 3.10.11 Time
 
-There is no PTP server available at the summit, currently NTP is used.
+There is no PTP server available at the summit, currently NTP is used. This has been extensively tested.
 
 ## 3.10.12 MCS Mount Positioning Command
 
@@ -102,11 +105,12 @@ The telescope can be commanded by the CSC, and has been extensively tested.
 
 ## 3.10.13 MCS Camera Cable Wrap Positioning Command
 
-The camera rotator can be commanded by the CSC, and is operated as a slave of the camera rotator.
+The camera rotator can be commanded by the CSC, and is operated as a slave of the camera rotator. This has been tested.
 
 ## 3.10.14 MCS Positioning Update Frequency
 
-The EUI stores high frequency telemetry, which can be accessed during two days, after that it is deleted.
+The EUI stores high frequency telemetry, which can be accessed during two days, after that it is deleted. This can be
+checked at the MCC (`/mnt/telemetry/TelemetryLogging/`) at any time.
 
 ## 3.10.15 MCS Positioning Tolerances
 
@@ -118,24 +122,24 @@ This has been tested using the EUI.
 
 ## 3.10.17 MCS Fixed Rate of Motion Software Limits
 
-The limits for the trajectory generation can be updated by the settings. Additionally, there is a supervisor for the
-speed to go to fault when the defined speed is overcomed.
+The limits for the trajectory generation can be updated by the settings. Additionally, there is a supervisor task for the
+speed to transition to fault when the defined speed is overcomed.
 
 ## 3.10.18 MCS Adjustable Rate of Motion Software Limits
 
-The limits can be updated by the settings.
+The limits can be updated by the settings. This has been extensively tested.
 
 ## 3.10.19 MCS Fixed Software Range of Travel Limits
 
-The limits can be enabled/disabled by the settings.
+The limits can be enabled/disabled by the settings. This has been extensively tested.
 
 ## 3.10.20 MCS Adjustable Range of Travel Limits
 
-The limits can be enabled/disabled by the settings.
+The limits can be enabled/disabled by the settings. This has been extensively tested.
 
 ## 3.10.21 Motion Near a Range of Travel Software Limit
 
-The limits are trigger when overcomed, so the stopping distance will depend on the acceleration settings.
+The limits are trigger when overcomed, so the stopping distance will depend on the acceleration and jerk settings.
 
 ## 3.10.22 Telemetry Buffer
 
@@ -143,7 +147,7 @@ Descoped, the CSC should manage this using SAL.
 
 ## 3.10.23 Engineering User Interface
 
-There is a EUI available, and has been extensively tested.
+There is an EUI available, and has been extensively tested.
 
 ### 3.10.23.1 Software Implementation
 
@@ -155,11 +159,13 @@ The EUI provides access to all the subsystems controlled by the MCS, see manual.
 
 ### 3.10.23.3 Information Display
 
-The EUI provides real time data for all the moving parts, as well as access to old data stored locally.
+The EUI provides real time data for all the moving parts, as well as access to old data stored locally. This has been
+extensively tested.
 
 ### 3.10.23.4 Telemetry Logging
 
-High frequency telemetry is stored locally for 2 days.
+High frequency telemetry is stored locally for 2 days. This can be checked at the MCC (`/mnt/telemetry/TelemetryLogging/`)
+at any time.
 
 ### 3.10.23.5 Engineering and Maintenance Positioning
 
@@ -167,22 +173,23 @@ The EUI allows any kind of commands, but sometimes this implies explicit allowan
 
 ### 3.10.23.6 Software Limits Change
 
-This can be done using the settings pages available in the EUI.
+This can be done using the settings pages available in the EUI. This has been extensively tested.
 
 ### 3.10.23.7 Power Up/Reboot
 
 For rebooting different tools are available, but a whole reboot from the EUI is not possible, there are procedures for
-rebooting the system properly to reduce shutdown times.
+rebooting the system properly to reduce shutdown times. This has been extensively tested.
 
 Additionally, there are both luminous and audible indication when an axis (AZ or EL) is enabled. This was requested by Rubin.
 
 ## 3.10.24 Natural Frequency Avoidance
 
-This was addressed during the axes tunning.
+This was addressed during the axes tunning. This has been extensively tested.
 
 ## 3.10.25 Hydrostatic Bearings
 
-The OSS can be commanded by the CSC/EUI/HHD and the corresponding telemetry is stored and published to the CSC.
+The OSS can be commanded by the CSC/EUI/HHD and the corresponding telemetry is stored and published to the CSC. This has
+been extensively tested.
 
 ## 3.10.26 M1M3 Mirror Cover
 
@@ -194,16 +201,16 @@ The Thermal systems can be commanded by the CSC/EUI/HHD and the corresponding te
 
 ## 3.10.28 Status Information
 
-All motion related telemetry is stored and published to the CSC.
+All motion related telemetry is stored and published to the CSC. This has been extensively tested.
 
 ## 3.10.29 Software Manuals and Documentation
 
 A specific web has made available for collecting all the relevant documentation and is constantly updated with the latest
-changes.
+changes. [**Documentation web.**](https://gitlab.tekniker.es/publico/3151-lsst/documentation)
 
 ## 3.10.30 Best Software Practices
 
-The coding has been conducting according to the best software practices.
+The coding has been conducted according to the best software practices.
 
 ## 3.10.31 Software EOL
 
