@@ -42,5 +42,8 @@ release:
     - tags
   script:
     - >
-      release-cli create --name $CI_COMMIT_TAG $CI_PROJECT_URL
-      --assets-link '{"name":"LTS_103_Validation.pdf","url":"$CI_PROJECT_URL/-/jobs/artifacts/'$CI_COMMIT_SHA'/raw/LTS_103_Validation.pdf?job=tag_generate"}'
+      release-cli create --name $CI_COMMIT_TAG
+      --assets-link '{"name":"LTS_103_Validation.pdf","url":"'$CI_PROJECT_URL'/-/jobs/artifacts/'$CI_COMMIT_SHA'/raw/LTS_103_Validation.pdf?job=tag_generate"}'
+
+
+      https://gitlab.tekniker.es/publico/3151-lsst/documentation/verifications/lts-103-mcs/-/jobs/artifacts/c2aa4b4843f25981173767a0775671d5ac7cc257/raw/LTS_103_Validation.pdf?job=tag_generate
