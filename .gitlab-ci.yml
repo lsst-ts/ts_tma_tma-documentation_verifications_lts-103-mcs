@@ -16,6 +16,7 @@ develop_generate:
     - chmod +x ./GeneratePDF.sh
     - docker login gitlab.tekniker.es:5001 --username $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD
     - ./GeneratePDF.sh $CI_COMMIT_SHORT_SHA $CI_COMMIT_TIMESTAMP
+    - echo $CI_PROJECT_URL
   artifacts:
     paths:
       - LTS_103_Validation.pdf
