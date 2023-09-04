@@ -8,7 +8,6 @@ variables:
 
 develop_generate:
   stage: develop_generate
-  image: gitlab.tekniker.es:5001/aut/personal/jgsaenz/pandoc-tekniker-pdf-template-dockerimage/pandoc-tekniker-template:latest
   only:
     - master
   script:
