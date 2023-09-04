@@ -15,6 +15,7 @@ develop_generate:
   artifacts:
     paths:
       - LTS_103_Validation.pdf
+      
 
 tag_generate:
   stage: tag_generate
