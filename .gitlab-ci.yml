@@ -16,7 +16,6 @@ develop_generate:
     - chmod +x ./GeneratePDF.sh
     - docker login gitlab.tekniker.es:5001 --username $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD
     - ./GeneratePDF.sh $CI_COMMIT_SHORT_SHA $CI_COMMIT_TIMESTAMP
-    - echo $CI_PROJECT_URL
   artifacts:
     paths:
       - LTS_103_Validation.pdf
@@ -31,7 +30,6 @@ tag_generate:
     - chmod +x ./GeneratePDF.sh
     - docker login gitlab.tekniker.es:5001 --username $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD
     - ./GeneratePDF.sh $CI_COMMIT_TAG $CI_COMMIT_TIMESTAMP
-    - echo $CI_PROJECT_URL
   artifacts:
     expire_in: never
     paths:
@@ -46,6 +44,3 @@ release:
     - >
       release-cli create --name $CI_COMMIT_TAG $CI_PROJECT_URL
       --assets-link '{"name":"LTS_103_Validation.pdf","url":"$CI_PROJECT_URL/-/jobs/artifacts/'$CI_COMMIT_SHA'/raw/LTS_103_Validation.pdf?job=tag_generate"}'
-      --assets-link '{"name":"LTS_103_Validation.pdf","url":"https://gitlab.tekniker.es/aut/projects/3151-LSST/LabVIEWCode/hmicomputers_documentation/-/jobs/artifacts/'$CI_COMMIT_SHA'/raw/LSST_HMI_SoftwareDocumentation.pdf?job=tag_generate"}'
-
-
