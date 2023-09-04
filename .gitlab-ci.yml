@@ -8,6 +8,7 @@ variables:
 
 develop_generate:
   stage: develop_generate
+  image: linux_docker_builder
   only:
     - master
   script:
