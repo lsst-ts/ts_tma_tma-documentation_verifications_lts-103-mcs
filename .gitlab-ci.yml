@@ -8,7 +8,7 @@ variables:
 
 develop_generate:
   stage: develop_generate
-  tag: linux_docker_builder
+  tags: linux_docker_builder
   only:
     - master
   script:
