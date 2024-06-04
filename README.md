@@ -206,7 +206,7 @@ All motion related telemetry is stored and published to the CSC. This has been e
 ## 3.10.29 Software Manuals and Documentation
 
 A specific web has made available for collecting all the relevant documentation and is constantly updated with the latest
-changes. [**Documentation web.**](https://gitlab.tekniker.es/publico/3151-lsst/documentation)
+changes. [**Documentation web.**](https://github.com/search?q=topic%3Adocument+topic%3Atma+org%3Alsst-ts&type=repositories)
 
 ## 3.10.30 Best Software Practices
 
